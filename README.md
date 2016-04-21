@@ -7,10 +7,10 @@
 
 ## Install
 
-With [Fisherman]
+With [fisherman]
 
 ```
-fisher i {{PLUGIN-NAME}}
+fisher {{PLUGIN-NAME}}
 ```
 
 ## Usage
@@ -23,4 +23,4 @@ fisher i {{PLUGIN-NAME}}
 [travis-badge]: https://img.shields.io/travis/{{OWNER-NAME}}/{{PLUGIN-NAME}}.svg?style=flat-square
 [slack-link]: https://fisherman-wharf.herokuapp.com/
 [slack-badge]: https://img.shields.io/badge/slack-join%20the%20chat-00B9FF.svg?style=flat-square
-[Fisherman]: https://github.com/fisherman/fisherman
+[fisherman]: https://github.com/fisherman/fisherman
