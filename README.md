@@ -1,26 +1,17 @@
-[![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-# {{PLUGIN-NAME}}
+# BeBat-Fish-Defaults
 
-{{PLUGIN-DESCRIPTION}}
+Some default settings and options for my own [fish](https://fishshell.com/) environment.
 
 ## Install
 
 With [fisherman]
 
 ```
-fisher {{PLUGIN-NAME}}
+fisher bbatsche/BeBat-Fish-Defaults
 ```
 
-## Usage
-
-```fish
-{{PLUGIN-NAME}}
-```
-
-[travis-link]: https://travis-ci.org/{{OWNER-NAME}}/{{PLUGIN-NAME}}
-[travis-badge]: https://img.shields.io/travis/{{OWNER-NAME}}/{{PLUGIN-NAME}}.svg
 [slack-link]: https://fisherman-wharf.herokuapp.com
 [slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
 [fisherman]: https://github.com/fisherman/fisherman
