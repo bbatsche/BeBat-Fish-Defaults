@@ -1,6 +1,6 @@
 set PATH "."
 set PATH $PATH "~/bin"
-set PATH $PATH "/opt/local/sbin" "/opt/local/bin"
+# set PATH $PATH "/opt/local/sbin" "/opt/local/bin"
 set PATH $PATH "/usr/local/sbin" "/usr/local/bin"
 set PATH $PATH "/usr/sbin" "/usr/bin"
 set PATH $PATH "/sbin" "/bin"
@@ -30,3 +30,7 @@ function logout --description 'I am so used to running logout instead of exit. L
 end
 
 set -g fish_key_bindings fish_vi_key_bindings
+
+function fish_mode_prompt
+  # NOOP - Disable vim mode indicator
+end
