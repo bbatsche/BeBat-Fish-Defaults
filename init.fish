@@ -1,11 +1,5 @@
-set PATH "."
-set PATH $PATH "~/bin"
-# set PATH $PATH "/opt/local/sbin" "/opt/local/bin"
-set PATH $PATH "/usr/local/sbin" "/usr/local/bin"
-set PATH $PATH "/usr/sbin" "/usr/bin"
-set PATH $PATH "/sbin" "/bin"
-set PATH $PATH "$HOME/.composer/vendor/bin"
-set PATH $PATH "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources"
+set -x PATH $PATH "$HOME/.composer/vendor/bin"
+set -x PATH $PATH "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources"
 
 set fish_greeting Type (set_color green)help(set_color normal) for instructions on how to use the fish shell
 
@@ -29,7 +23,27 @@ function logout --description 'I am so used to running logout instead of exit. L
     exit
 end
 
+function teleplat-login -d "Login to Platform.sh's Teleport cluster"
+    tsh --proxy=leap.magento.cloud:10443 login
+end
+
+function teleplat-ssh -d "SSH into a project's environment"
+    if test (count $argv) -eq 0
+        echo "Who do you want to SSH to?"
+        return 1
+    end
+    if test (count $argv) -eq 1
+        tsh --proxy=leap.magento.cloud:10443 ssh $argv[1]@$argv[1].ent.magento.cloud
+    else
+        tsh --proxy=leap.magento.cloud:10443 ssh $argv[1]@$argv[1].ent.magento.cloud $argv[2..-1]
+    end
+end
+
 set -g fish_key_bindings fish_vi_key_bindings
+
+set -gx NVM_DIR /usr/local/opt/nvm
+
+eval (direnv hook fish)
 
 function fish_mode_prompt
   # NOOP - Disable vim mode indicator
