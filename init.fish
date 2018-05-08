@@ -1,10 +1,5 @@
-set PATH $PATH "/usr/local/sbin" "/usr/local/bin"
-set PATH $PATH "/usr/sbin" "/usr/bin"
-set PATH $PATH "/sbin" "/bin"
-set PATH $PATH "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources"
-set PATH $PATH "$HOME/.magento-cloud/bin"
-set PATH $PATH "$HOME/.platformsh/bin"
-set PATH $PATH "/usr/local/opt/python@2/bin"
+set -x PATH $PATH "$HOME/.composer/vendor/bin"
+set -x PATH $PATH "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources"
 
 set fish_greeting Type (set_color green)help(set_color normal) for instructions on how to use the fish shell
 
