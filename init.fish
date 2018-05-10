@@ -1,4 +1,3 @@
-set -x PATH $PATH "$HOME/.composer/vendor/bin"
 set -x PATH $PATH "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources"
 
 set fish_greeting Type (set_color green)help(set_color normal) for instructions on how to use the fish shell
@@ -42,8 +41,6 @@ end
 set -g fish_key_bindings fish_vi_key_bindings
 
 set -gx NVM_DIR /usr/local/opt/nvm
-
-eval (direnv hook fish)
 
 function fish_mode_prompt
   # NOOP - Disable vim mode indicator
