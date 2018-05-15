@@ -22,22 +22,6 @@ function logout --description 'I am so used to running logout instead of exit. L
     exit
 end
 
-function teleplat-login -d "Login to Platform.sh's Teleport cluster"
-    tsh --proxy=leap.magento.cloud:10443 login
-end
-
-function teleplat-ssh -d "SSH into a project's environment"
-    if test (count $argv) -eq 0
-        echo "Who do you want to SSH to?"
-        return 1
-    end
-    if test (count $argv) -eq 1
-        tsh --proxy=leap.magento.cloud:10443 ssh $argv[1]@$argv[1].ent.magento.cloud
-    else
-        tsh --proxy=leap.magento.cloud:10443 ssh $argv[1]@$argv[1].ent.magento.cloud $argv[2..-1]
-    end
-end
-
 set -g fish_key_bindings fish_vi_key_bindings
 
 set -gx NVM_DIR /usr/local/opt/nvm
