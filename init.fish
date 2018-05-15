@@ -26,6 +26,8 @@ set -g fish_key_bindings fish_vi_key_bindings
 
 set -gx NVM_DIR /usr/local/opt/nvm
 
+set -g __teleport_proxy leap.magento.cloud:10443
+
 function fish_mode_prompt
   # NOOP - Disable vim mode indicator
 end

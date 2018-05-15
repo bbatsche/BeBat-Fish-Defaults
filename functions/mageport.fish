@@ -11,15 +11,15 @@ function __mageport_ssh
     set host (__mageport_expand_host $argv[1])
 
     if [ (count $argv) -eq 1 ]
-        tsh --proxy=leap.magento.cloud:10443 ssh $host
+        tsh --proxy=$__teleport_proxy ssh $host
     else
-        tsh --proxy=leap.magento.cloud:10443 ssh $host $argv[2..-1]
+        tsh --proxy=$__teleport_proxy ssh $host $argv[2..-1]
     end
 end
 
 function __mageport_expand_host
     set user $argv[1]
-    set project (string replace -r "_stg" "" $argv[1])
+    set project (string replace -r '_stg$' "" $argv[1])
 
     echo $user@$project.ent.magento.cloud
 end
@@ -38,7 +38,7 @@ function __mageport_scp
     set argv[1] (__mageport_expand_scp $argv[1])
     set argv[2] (__mageport_expand_scp $argv[2])
 
-    tsh --proxy=leap.magento.cloud:10443 scp $argv
+    tsh --proxy=$__teleport_proxy scp $argv
 end
 
 function mageport -d "Teleport for Magento Cloud"
@@ -51,7 +51,7 @@ function mageport -d "Teleport for Magento Cloud"
         case "help"
             __mageport_help
         case "login"
-            tsh --proxy=leap.magento.cloud:10443 login
+            tsh --proxy=$__teleport_proxy login
         case "ssh"
             if [ (count $argv) -lt 2 ]
                 __mageport_help
