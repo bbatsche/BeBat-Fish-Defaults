@@ -11,15 +11,15 @@ function ll --description 'List contents of directory using long format'
 end
 
 function px
-    ps xco pid,pcpu,pmem,command
+  ps xco pid,pcpu,pmem,command
 end
 
 function pxa
-    ps axco user,pid,pcpu,pmem,command
+  ps axco user,pid,pcpu,pmem,command
 end
 
 function logout --description 'I am so used to running logout instead of exit. Let\'s just give up already.'
-    exit
+  exit
 end
 
 set -g fish_key_bindings fish_vi_key_bindings
@@ -27,6 +27,7 @@ set -g fish_key_bindings fish_vi_key_bindings
 set -gx NVM_DIR /usr/local/opt/nvm
 
 set -g __teleport_proxy leap.magento.cloud:10443
+set -g __teleport_user bbatschelet
 
 function fish_mode_prompt
   # NOOP - Disable vim mode indicator
