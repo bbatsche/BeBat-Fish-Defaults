@@ -1,4 +1,5 @@
 set -x PATH $PATH "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources"
+set -x COMPOSER_MEMORY_LIMIT -1
 
 set fish_greeting Type (set_color green)help(set_color normal) for instructions on how to use the fish shell
 
