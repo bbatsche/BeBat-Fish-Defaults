@@ -1,4 +1,4 @@
-set fish_greeting Type (set_color green)help(set_color normal) for instructions on how to use the fish shell
+set -g fish_greeting Type (set_color green)help(set_color normal) for instructions on how to use the fish shell
 
 set -g fish_key_bindings fish_vi_key_bindings
 
@@ -19,3 +19,7 @@ set -g fish_vi_force_cursor 1
 
 set -g grc_plugin_execs configure curl df diff dig docker du free gcc g++ ifconfig kubectl \
                         lsof make mount mtr netstat ping ps tail traceroute uptime wdiff
+
+if test -e {$HOME}/.iterm2_shell_integration.fish
+    source {$HOME}/.iterm2_shell_integration.fish
+end
