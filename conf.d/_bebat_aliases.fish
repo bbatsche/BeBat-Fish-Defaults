@@ -1,6 +1,6 @@
 alias rm "trash"
 
-alias cat "bat --style plain --theme 'Solarized (dark)' --paging never"
+alias cat "bat --style changes,numbers,snip,rule --theme 'Solarized (dark)'"
 
 alias pstree "pstree -g 2"
 
