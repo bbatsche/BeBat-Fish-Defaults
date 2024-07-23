@@ -1,3 +1,3 @@
 function lx
-    exa --long --icons --group-directories-first --extended --git $argv
+    eza --long --icons --no-quotes --group-directories-first --group --extended --mounts --flags $argv
 end

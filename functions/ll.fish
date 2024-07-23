@@ -1,3 +1,3 @@
 function ll
-    exa --long --icons --group-directories-first --git-ignore --git $argv
+    eza --long --icons --no-quotes --group-directories-first --smart-group --git-ignore --git --git-repos $argv
 end
