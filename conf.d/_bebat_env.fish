@@ -4,4 +4,4 @@ set -gx DYLD_FALLBACK_LIBRARY_PATH /usr/local/opt/openssl/lib
 set -gx PATH $PATH "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources"
 set -gx VISUAL "code -w"
 
-eval ("{$HOMEBREW_PREFIX}/bin/brew" shellenv)
+eval (brew shellenv)
